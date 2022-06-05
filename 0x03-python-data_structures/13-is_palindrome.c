@@ -1,31 +1,21 @@
 #include "lists.h"
 
 /**
- * palindrom -  recursive palind or not
- * @head: head list
- * Return: 0 if it is not a palindrome
- * 1 if it is a palindrome
+ * is_palindrome - check if a linked list is a palindrome
+ * @head: pointer to head of list
+ * Return: 0 or 1
  */
 int is_palindrome(listint_t **head)
 {
-	if (head == NULL || *head == NULL)
-		return (1);
-	return (aux_palind(head, *head));
-}
+    const listint_t *current;
+    const listint_t *tail;
+    unsigned int n = 0;
 
-/**
- * aux_palind - funct to know if is palindrome
- * @head: head list
- * @end: end list
- */
-int aux_palind(listint_t **head, listint_t *end)
-{
-	if (end == NULL)
-		return (1);
-	if (aux_palind(head, end->next) && (*head)->n == end->n)
-	{
-		*head = (*head)->next;
-		return (1);
-	}
-	return (0);
+    //Get length
+    //Use a function to get a node on a specific index
+    //check the first to the last and, second to second last ....
+    //return false if one check was False
+    //return true at the end (if all passed the checks)
+
+    return (n);
 }
